@@ -1,0 +1,30 @@
+<div class="container mt-5">
+    <div class="card" >
+        <div class="card-body">
+            <h2 class="card-title">Actualizar producto</h2>
+            <form class="mt-5">
+                <div class="form-group mb-2">
+                    <label for="productDescription">Descripción</label>
+                    <textarea name="productDescription" class="form-control" id="productDescription" cols="30" rows="10" [(ngModel)]="productDescription"></textarea>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="productAmount">Cantidad</label>
+                    <input type="number" class="form-control" id="productAmount" name="productAmount" [(ngModel)]="productAmount"/>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="productValues">Precio</label>
+                    <input type="text" class="form-control" id="productValues" name="productValues" [(ngModel)]="productValues"/>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="productStatus">Estatus</label>
+                    <input type="text" class="form-control" id="costumerAdress" name="productStatus" [(ngModel)]="productStatus"/>
+                </div>
+                <a [routerLink]="['/product']">
+                    <button class="btn btn-danger">cancelar</button>
+                </a>
+                <button (click)="(updateProduct())" class="btn btn-primary float-end">Guardar</button>
+            </form>
+        </div>
+    </div>    
+</div>
+

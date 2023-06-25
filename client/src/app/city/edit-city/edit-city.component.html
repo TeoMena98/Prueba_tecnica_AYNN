@@ -1,0 +1,18 @@
+<div class="container mt-5">
+    <div class="card" >
+        <div class="card-body">
+            <h2 class="card-title">Actualizar ciudad</h2>
+            <form class="mt-5">
+                <div class="form-group mb-3">
+                    <label for="cityName">Nombre de la ciudad</label>
+                    <input type="text" class="form-control" id="cityName" name="cityName" [(ngModel)]="cityName">
+                </div>
+                <a [routerLink]="['/city']">
+                    <button class="btn btn-danger">cancelar</button>
+                </a>
+                <button (click)="(updateCity())" class="btn btn-primary float-end">Guardar</button>
+            </form>
+        </div>
+    </div>    
+</div>
+

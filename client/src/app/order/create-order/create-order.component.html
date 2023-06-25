@@ -1,0 +1,33 @@
+<div class="container mt-5">
+    <div class="card" >
+        <div class="card-body">
+            <h2 class="card-title">Crear orden</h2>
+            <form [formGroup]="addProducts">
+                <div class="form-group mb-3 mt-3">
+                    <label for="costumerId">Cliente</label>
+                    <select class="form-control" name="costumerId" id="costumerId" [(ngModel)]="costumerId">
+                        <option *ngFor="let dataItem of CostumerList" value="{{dataItem.costumer_id}}">{{dataItem.costumer_name}}</option>
+                    </select>
+                </div>
+                <div class="form-group mb-3 mt-3">
+                    <label for="orderDatedelivery">Fecha de entrega</label>
+                    <input class="form-control" type="text" name="orderDatedelivery" id="orderDatedelivery" [(ngModel)]="orderDatedelivery">
+                </div>
+                <div class="form-group mb-3 mt-3">
+                    <h3>Productos</h3>
+                    <div formArrayName="orderData">
+                        <button class="btn btn-warning btn-sm mr-1" (click)="addProduct()">Agregar producto</button>
+                        <div class="form-row mb-4 mt-4" *ngFor=" let buyInformation of formArrayOrderData.controls; let i = index" [formGroupName]="i">
+                            <div class="input-group input-group-sm col-12 col-md-6 mb-4">
+                                <select class="form-control" name="productId" id="productId" formControlName="product">
+                                    <option *ngFor="let dataItem of ProductList" value="{{dataItem.product_id}}">{{dataItem.product_description}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <button class="btn btn-primary float-end" (click)="addOrder()"> Guardar </button>
+        </div>
+    </div>    
+</div>

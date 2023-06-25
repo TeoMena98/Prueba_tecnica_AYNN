@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <a class="navbar-brand" href="#">
+        <h1 class="text-light">Prueba tecnica</h1>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a [routerLink]="['/order']" class="nav-link px-0 align-middle">
+                    <i class="fs-4 bi-table"></i>
+                    <span class="ms-1 d-none d-sm-inline text-light">Ordenes</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['/product']"  class="nav-link px-0 align-middle">
+                    <i class="fs-4 bi-table"></i>
+                    <span class="ms-1 d-none d-sm-inline text-light">Productos</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['/costumer']" class="nav-link px-0 align-middle">
+                    <i class="fs-4 bi-table"></i>
+                    <span class="ms-1 d-none d-sm-inline text-light">Clientes</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['/city']" class="nav-link px-0 align-middle">
+                    <i class="fs-4 bi-table"></i>
+                    <span class="ms-1 d-none d-sm-inline text-light">Ciudades</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

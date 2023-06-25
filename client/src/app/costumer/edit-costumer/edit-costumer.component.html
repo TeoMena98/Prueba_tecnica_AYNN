@@ -1,0 +1,38 @@
+<div class="container mt-5">
+    <div class="card" >
+        <div class="card-body">
+            <h2 class="card-title">Actualizar cliente</h2>
+            <form class="mt-5">
+                <div class="form-group mb-2">
+                    <label for="costumerIdNumber">Identificacion</label>
+                    <input type="text" class="form-control" id="costumerIdNumber" name="costumerIdNumber" [(ngModel)]="costumerIdNumber"/>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="costumerName">Nombre</label>
+                    <input type="text" class="form-control" id="costumerName" name="costumerName" [(ngModel)]="costumerName"/>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="costumerBirthDate">Fecha nacimeinto</label>
+                    <input type="text" class="form-control" id="costumerBirthDate" name="costumerBirthDate" [(ngModel)]="costumerBirthDate"/>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="costumerAdress">Direccion</label>
+                    <input type="text" class="form-control" id="costumerAdress" name="costumerAdress" [(ngModel)]="costumerAdress"/>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="costumerPhone">Telefono</label>
+                    <input type="text" class="form-control" id="costumerPhone" name="costumerPhone" [(ngModel)]="costumerPhone"/>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="costumerName">ciudad</label>
+                    <input type="text" class="form-control" id="cityId" name="cityId" [(ngModel)]="cityId"/>
+                </div>
+                <a [routerLink]="['/costumer']">
+                    <button class="btn btn-danger">cancelar</button>
+                </a>
+                <button (click)="(updateCostumer())" class="btn btn-primary float-end">Guardar</button>
+            </form>
+        </div>
+    </div>    
+</div>
+
